@@ -1,4 +1,4 @@
-/* Theme Name: Stravix - Responsive Personal Portfolio Template
+/* Theme Name: CaptainSols - Responsive Personal Portfolio Template
    Author: Themesdesign
    Version: 1.0.0
    File Description: Main Js file of the template
@@ -7,9 +7,9 @@
 ! function($) {
     "use strict";
 
-    var StravixApp = function() {};
+    var CaptainSolsApp = function() {};
 
-    StravixApp.prototype.initStickyMenu = function() {
+    CaptainSolsApp.prototype.initStickyMenu = function() {
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
 
@@ -21,7 +21,7 @@
         });
     },
     
-    StravixApp.prototype.initSmoothLink = function() {
+    CaptainSolsApp.prototype.initSmoothLink = function() {
         $('.navbar-nav a').on('click', function(event) {
             var $anchor = $(this);
             $('html, body').stop().animate({
@@ -31,11 +31,11 @@
         });
     },
 
-    StravixApp.prototype.initScrollspy = function() {
+    CaptainSolsApp.prototype.initScrollspy = function() {
         $("#navbarCollapse").scrollspy({ offset: 20 });
     },
 
-    StravixApp.prototype.initHomeTextAnimation = function()  {
+    CaptainSolsApp.prototype.initHomeTextAnimation = function()  {
         $('.text-animate').each(function() {
             $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
         });
@@ -62,7 +62,7 @@
         });
     }
 
-    StravixApp.prototype.initTestiMonial = function() {
+    CaptainSolsApp.prototype.initTestiMonial = function() {
          $("#owl-demo").owlCarousel({
             autoPlay: 3000, 
             items: 2,
@@ -71,7 +71,7 @@
         });
     },
 
-    StravixApp.prototype.initPortfolioFilter = function() {
+    CaptainSolsApp.prototype.initPortfolioFilter = function() {
         $(window).on('load', function() {
             // Filter 
             //PORTFOLIO FILTER 
@@ -105,7 +105,7 @@
         });
     },
 
-    StravixApp.prototype.initCounter = function() {
+    CaptainSolsApp.prototype.initCounter = function() {
         var a = 0;
         $(window).scroll(function() {
             var oTop = $('#counter').offset().top - window.innerHeight;
@@ -137,7 +137,7 @@
         });
     },
 
-    StravixApp.prototype.initMfpVideo = function() {
+    CaptainSolsApp.prototype.initMfpVideo = function() {
         $('.mfp-image').magnificPopup({
             type: 'image',
             closeOnContentClick: true,
@@ -150,7 +150,7 @@
         });
     },
 
-    StravixApp.prototype.initBacktoTop = function() {
+    CaptainSolsApp.prototype.initBacktoTop = function() {
         $(window).scroll(function(){
             if ($(this).scrollTop() > 100) {
                 $('.back-to-top').fadeIn();
@@ -164,7 +164,7 @@
         });
     },
 
-    StravixApp.prototype.initContact = function() {
+    CaptainSolsApp.prototype.initContact = function() {
          $('#contact-form').submit(function() {
 
             var action = $(this).attr('action');
@@ -200,7 +200,7 @@
     },
 
     
-    StravixApp.prototype.init = function() {
+    CaptainSolsApp.prototype.init = function() {
         this.initStickyMenu();
         this.initSmoothLink();
         this.initScrollspy();
@@ -213,11 +213,11 @@
         this.initBacktoTop();
     },
     //init
-    $.StravixApp = new StravixApp, $.StravixApp.Constructor = StravixApp
+    $.CaptainSolsApp = new CaptainSolsApp, $.CaptainSolsApp.Constructor = CaptainSolsApp
 }(window.jQuery),
 
 //initializing
 function($) {
     "use strict";
-    $.StravixApp.init();
+    $.CaptainSolsApp.init();
 }(window.jQuery);
